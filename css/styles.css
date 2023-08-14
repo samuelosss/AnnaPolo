@@ -147,7 +147,7 @@ h2 {
 
 .chevron-up {
 	position: fixed;
-	bottom: 35px;
+	bottom: 20px;
 	right: 20px;
 	font-size: 2rem;
 	color: var(--color1a);
