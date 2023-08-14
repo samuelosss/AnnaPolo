@@ -1,10 +1,49 @@
 :root {
 	--gap: 3px;
-	--border: 1px solid black;
+	/* --border: 1px solid black; */
+
+	box-sizing: border-box;
+
+	/* colors */
+	--color1: rgba(198, 196, 195, 0.8);
 }
 
 body {
-	margin: 10px;
+	margin: 0px;
+	padding: 10px;
+}
+
+nav {
+	/* position: -webkit-sticky; /* Safari */
+	/* position: sticky; */
+	top: 0;
+	margin: -10px; /*I choose this option, not sure if it's the best w3 practice*/
+	background-color: var(--color1);
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav > div {
+	width: calc(100% / 3);
+	align-self: center;
+}
+.menu-hamburger {
+	text-align: right;
+}
+
+.logo {
+	text-align: center;
+}
+
+footer {
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	bottom: 0;
+	margin: 0 -10px 0 -10px;
+	background-color: var(--color1);
+	height: 50px;
+	padding: 0 10px 0 10px;
 }
 
 .container-flex-100 {
@@ -46,4 +85,10 @@ body {
 	.pic {
 		width: calc((100% - (3 * var(--gap))) / 4);
 	}
+}
+
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
 }
