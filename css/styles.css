@@ -4,18 +4,30 @@
 	/* --border: 1px solid black; */
 
 	/* colors */
-	--color1: rgba(255, 255, 255, 1);
-	--color1a: rgb(198, 196, 195);
-	--color2: rgb(198, 196, 195);
+	--color1: rgba(232, 227, 224, 1);
+	/* --color1a: rgb(198, 196, 195); */
+	--color1-op-05: rgba(232, 227, 224, 0.5);
+	--color2: rgba(232, 227, 224, 0.8);
 	--marg: 0px;
 	--pad: 10px;
 	--font1: ;
 	--font2: ;
+	color: var(--color1);
+	--border-rad: 5px;
 }
 
 body {
+	min-height: 100vh;
+	box-sizing: border-box;
 	margin: var(--marg);
 	padding: var(--pad);
+	background-image: linear-gradient(
+			to right,
+			rgba(30, 75, 115, 1),
+			rgba(255, 255, 255, 0)
+		),
+		url("../img/potteryStudio-EDIT.jpeg");
+	/* linear-gradient(to top, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)); */
 }
 
 a {
@@ -36,11 +48,13 @@ nav {
 	/* position: -webkit-sticky; /* Safari */
 	/* position: sticky; */
 	top: 0;
-	margin: calc(
+	/* margin: calc(
 		var(--pad) * (-1)
-	); /*stretches nav margin over body's padding, I choose this option, not sure if it's the best w3 practice*/
-	background-color: var(--color1);
-	height: 50px;
+	);  */
+	/*stretches nav margin over body's padding, I choose this option, not sure if it's the best w3 practice*/
+	/* background-color: var(--color1); */
+	margin-bottom: 30px;
+	height: 70px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -57,22 +71,28 @@ nav > div {
 
 .logo {
 	text-align: center;
+	height: 50px;
 }
 
 footer {
 	/* position: -webkit-sticky; /* Safari */
-	/* position: sticky; */
-	/* bottom: 0; */
+	position: static;
+	bottom: 0;
+	left: 0;
+	width: 100%;
 	/* margin: 20px -10px -10px -10px;  pokud jina barva nez pozadi a chci celou sirku */
 	margin: 10px 0 0 0;
-	background-color: var(--color1);
+	/* background-color: var(--color1); */
 	/* height: 50px; */
 	padding: 10px 0 15px 0;
-	border-top: 1px solid var(--color2);
+	border-top: 1px solid var(--color1);
 	text-align: center;
 }
 
 .container-flex-100 {
+	box-sizing: border-box;
+	padding: var(--pad);
+	margin-bottom: 30px;
 	width: 100%;
 	height: auto;
 	border: var(--border);
@@ -80,10 +100,14 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	flex: 0 0 auto;
+	background-color: var(--color1-op-05);
+
+	border-radius: var(--border-rad);
 }
 
 .about-me-flex {
 	justify-content: space-evenly;
+	background: none;
 }
 
 .pic {
@@ -91,6 +115,7 @@ footer {
 	height: auto;
 	object-fit: cover;
 	/* max-width: calc(100%/3); */
+	border-radius: var(--border-rad);
 }
 
 #portrait {
@@ -105,7 +130,7 @@ footer {
 	margin-bottom: 20px;
 	/* padding: 0 30px 0 30px; */
 	border-radius: 50%;
-	border: 2px solid var(--color2);
+	border: 2px solid var(--color1);
 }
 
 div#about-me {
@@ -152,6 +177,7 @@ button {
 	border: none;
 	background: none;
 	cursor: pointer;
+	color: var(--color1);
 }
 
 .menu-pop-up {
@@ -170,6 +196,7 @@ button {
 	right: 10px;
 	background-color: grey;
 	display: none;
+	border-radius: var(--border-rad);
 }
 
 .close-button {
@@ -190,12 +217,23 @@ h2 {
 	bottom: 20px;
 	right: 20px;
 	font-size: 2rem;
-	color: var(--color1a);
+	color: var(--color1);
 	z-index: 1;
 }
 
-#kontakt {
+.kontakt {
 	unicode-bidi: bidi-override;
 	direction: rtl;
 	/* text-align: left; */
+	text-align: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	min-height: 70vh;
+}
+
+.pressed {
+	opacity: 0.5;
 }
