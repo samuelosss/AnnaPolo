@@ -8,12 +8,39 @@
 	/* --color1a: rgb(198, 196, 195); */
 	--color1-op-05: rgba(232, 227, 224, 0.5);
 	--color2: rgba(232, 227, 224, 0.8);
+	--color3: rgba(30, 75, 115, 1);
+	--colorGrad: linear-gradient(
+		to right,
+		rgba(30, 75, 115, 1),
+		rgb(37, 94, 145)
+	);
 	--marg: 0px;
 	--pad: 10px;
-	--font1: ;
-	--font2: ;
-	color: var(--color1);
 	--border-rad: 5px;
+	--font1: "Josefin Sans", sans-serif;
+	--font2: ;
+	--font3: ;
+	color: var(--color1);
+}
+@font-face {
+	font-family: liberationSerif;
+	src: url("./fonts/liberation_serif/LiberationSerif-Regular.ttf");
+}
+@font-face {
+	font-family: liberationSerif;
+	src: url("./fonts/liberation_serif/LiberationSerif-Bold.ttf");
+	font-weight: bold;
+}
+@font-face {
+	font-family: liberationSerif;
+	src: url("./fonts/liberation_serif/LiberationSerif-Italic.ttf");
+	font-style: italic;
+}
+@font-face {
+	font-family: liberationSerif;
+	src: url("./fonts/liberation_serif/LiberationSerif-BoldItalic.ttf");
+	font-weight: bold;
+	font-style: italic;
 }
 
 body {
@@ -28,6 +55,7 @@ body {
 		),
 		url("../img/potteryStudio-EDIT.jpeg");
 	/* linear-gradient(to top, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)); */
+	font-family: var(--font1);
 }
 
 a {
@@ -108,6 +136,7 @@ footer {
 .about-me-flex {
 	justify-content: space-evenly;
 	background: none;
+	font-family: liberationSerif;
 }
 
 .pic {
@@ -123,7 +152,8 @@ footer {
 	/* width: calc((100% - var(--gap)) / 3); */
 	--width: 40vw;
 	width: var(--width);
-	/* max-width: 350px; */
+	max-width: 250px;
+	max-height: 250px;
 	height: var(--width);
 	object-fit: cover;
 	text-align: center;
@@ -194,7 +224,7 @@ button {
 	position: fixed;
 	top: 10px;
 	right: 10px;
-	background-color: grey;
+	background: var(--colorGrad);
 	display: none;
 	border-radius: var(--border-rad);
 }
