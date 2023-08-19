@@ -1,24 +1,25 @@
 :root {
 	box-sizing: border-box;
-	--gap: 3px;
+	--gap: 8px;
 	/* --border: 1px solid black; */
 
 	/* colors */
-	--color1: rgba(232, 227, 224, 1);
+	--color1: rgb(255, 255, 255);
 	/* --color1a: rgb(198, 196, 195); */
 	--color1-op-05: rgba(232, 227, 224, 0.5);
-	--color2: rgba(232, 227, 224, 0.8);
+	--color2: rgba(232, 227, 224, 1);
 	--color3: rgba(30, 75, 115, 1);
 	--colorGrad: linear-gradient(
 		to right,
-		rgba(30, 75, 115, 1),
-		rgb(37, 94, 145)
+		rgba(161, 211, 255, 0.9),
+		rgba(135, 185, 230, 1)
 	);
+	--colorGradHighl: rgba(97, 153, 202, 1);
 	--marg: 0px;
 	--pad: 10px;
 	--border-rad: 5px;
 	--font1: "Josefin Sans", sans-serif;
-	--font2: ;
+	--font2: "liberationSerif", serif;
 	--font3: ;
 	color: var(--color1);
 }
@@ -49,13 +50,23 @@ body {
 	margin: var(--marg);
 	padding: var(--pad);
 	background-image: linear-gradient(
-			to right,
-			rgba(30, 75, 115, 1),
-			rgba(255, 255, 255, 0)
+			to bottom,
+			rgba(161, 211, 255, 0.85),
+			rgba(161, 211, 255, 0.9)
 		),
-		url("../img/potteryStudio-EDIT.jpeg");
+		url("../img/background/potteryTable1.jpg");
+	background-position: 50% 0%;
+	background-size: 100%;
+
 	/* linear-gradient(to top, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)); */
 	font-family: var(--font1);
+}
+
+h1,
+h2 {
+	text-align: center;
+	padding: 3vh 2vh;
+	margin: 0 0 20px 0;
 }
 
 a {
@@ -73,6 +84,7 @@ a:active {
 }
 
 nav {
+	box-sizing: border-box;
 	/* position: -webkit-sticky; /* Safari */
 	/* position: sticky; */
 	top: 0;
@@ -81,25 +93,33 @@ nav {
 	);  */
 	/*stretches nav margin over body's padding, I choose this option, not sure if it's the best w3 practice*/
 	/* background-color: var(--color1); */
-	margin-bottom: 30px;
-	height: 70px;
-	display: flex;
+	margin: 0px 0px;
+	height: 20vh;
+	/* display: flex;
 	justify-content: space-between;
-	align-items: center;
-	padding-right: 10px;
+	align-items: center; */
+	padding-right: 0;
+	/* background: grey; */
+	position: relative;
 }
 
 nav > div {
-	width: calc(100% / 3);
+	/* width: calc(100% / 3); */
 	/* align-self: center; */
 }
 .menu-hamburger {
+	position: absolute;
+	top: 0px;
+	right: 0;
 	text-align: right;
+	/* align-self: flex-start */
 }
 
 .logo {
 	text-align: center;
-	height: 50px;
+	height: 20vh;
+	/* margin-right: auto;
+	margin-left: auto; */
 }
 
 footer {
@@ -216,10 +236,10 @@ button {
 	justify-content: flex-start;
 	align-items: center; */
 	/* margin: 10px 10px 0 0; */
-	/* width: 250px;
-	height: 300px; */
+	width: 40vw;
+	/*height: 300px; */
 	max-width: 350px;
-
+	min-width: 150px;
 	z-index: 2;
 	position: fixed;
 	top: 10px;
@@ -229,17 +249,24 @@ button {
 	border-radius: var(--border-rad);
 }
 
+.menu-pop-up h1,
+.menu-pop-up h2 {
+	margin: 0;
+}
+/* .menu-pop-up:last-child {
+	border-bottom-left-radius: var(--border-rad);
+	border-bottom-right-radius: var(--border-rad);
+} */
+
+.highlighted {
+	/* background-color: var(--colorGradHighl); */
+	color: var(--colorGradHighl);
+}
+
 .close-button {
 	/* align-self: flex-end; */
 	text-align: right;
 	padding: 10px;
-}
-
-h1,
-h2 {
-	text-align: center;
-	padding: 0 30px 10px 30px;
-	margin: 0 0 20px 0;
 }
 
 .chevron-up {

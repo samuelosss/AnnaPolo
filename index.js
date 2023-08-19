@@ -68,3 +68,12 @@ $("img").click(function () {
 	// Update the previous element to the current one
 	prev = $(this);
 });
+
+$(".menu-pop-up h2").hover(
+	function () {
+		$(this).toggleClass("highlighted");
+	},
+	function () {
+		$(this).toggleClass("highlighted");
+	}
+);
