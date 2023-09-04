@@ -47,3 +47,4 @@ img/LogoOLD.png
 .gitignore
 img/background/potteryTable.jpg
 img/logo/LogoORG.png
+server.js
